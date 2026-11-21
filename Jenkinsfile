@@ -37,6 +37,13 @@ pipeline {
                 echo 'All tests passed'
             }
         }
+		
+		stage('Validation') {
+			steps {
+				echo 'Starting validation'
+				sh 'exit 1'
+			}
+		}
 
         stage('Package') {
             steps {
